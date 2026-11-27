@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/clinicians", "destination": "/api/clinicians" },
+    { "source": "/match", "destination": "/api/match" },
+    { "source": "/match/explain", "destination": "/api/match-explain" }
+  ]
+}
