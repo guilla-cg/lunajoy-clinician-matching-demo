@@ -1,0 +1,93 @@
+[
+  {
+    "id": "dr-maya-chen",
+    "fullName": "Dr. Maya Chen",
+    "credentials": "PhD, Clinical Psychologist",
+    "states": ["CA", "NY", "TX"],
+    "languages": ["English", "Mandarin"],
+    "gender": "female",
+    "insuranceProviders": ["Aetna", "Blue Cross Blue Shield", "Cigna"],
+    "appointmentTypes": ["therapy"],
+    "specialties": ["anxiety", "trauma", "depression"],
+    "availability": [{"day":"Today","time":"4:30 PM","hoursFromNow":1.5},{"day":"Tomorrow","time":"9:00 AM","hoursFromNow":18}],
+    "sessionLoad": 12
+  },
+  {
+    "id": "dr-jordan-rivera",
+    "fullName": "Dr. Jordan Rivera",
+    "credentials": "MD, Psychiatrist",
+    "states": ["CA", "TX", "FL"],
+    "languages": ["English", "Spanish"],
+    "gender": "nonbinary",
+    "insuranceProviders": ["Aetna", "UnitedHealthcare"],
+    "appointmentTypes": ["medication"],
+    "specialties": [],
+    "availability": [{"day":"Today","time":"6:00 PM","hoursFromNow":3},{"day":"Thursday","time":"11:00 AM","hoursFromNow":40}],
+    "sessionLoad": 9
+  },
+  {
+    "id": "dr-amina-okafor",
+    "fullName": "Dr. Amina Okafor",
+    "credentials": "LCSW, Therapist",
+    "states": ["CA", "NY", "WA"],
+    "languages": ["English", "Spanish"],
+    "gender": "female",
+    "insuranceProviders": ["Blue Cross Blue Shield", "Cigna", "UnitedHealthcare"],
+    "appointmentTypes": ["therapy"],
+    "specialties": ["anxiety", "perinatal", "couples", "depression"],
+    "availability": [{"day":"Tomorrow","time":"6:30 PM","hoursFromNow":26},{"day":"Friday","time":"8:00 AM","hoursFromNow":64}],
+    "sessionLoad": 7
+  },
+  {
+    "id": "dr-eli-brooks",
+    "fullName": "Dr. Eli Brooks",
+    "credentials": "PsyD, Clinical Psychologist",
+    "states": ["CA", "TX", "CO"],
+    "languages": ["English"],
+    "gender": "male",
+    "insuranceProviders": ["Aetna", "Blue Cross Blue Shield"],
+    "appointmentTypes": ["therapy"],
+    "specialties": ["trauma", "anxiety", "lgbtq-affirming"],
+    "availability": [{"day":"Today","time":"7:00 PM","hoursFromNow":4},{"day":"Wednesday","time":"2:00 PM","hoursFromNow":48}],
+    "sessionLoad": 16
+  },
+  {
+    "id": "dr-sofia-martinez",
+    "fullName": "Dr. Sofia Martinez",
+    "credentials": "PMHNP-BC, Psychiatric Nurse Practitioner",
+    "states": ["CA", "TX", "AZ"],
+    "languages": ["English", "Spanish"],
+    "gender": "female",
+    "insuranceProviders": ["Aetna", "Cigna", "UnitedHealthcare"],
+    "appointmentTypes": ["medication"],
+    "specialties": [],
+    "availability": [{"day":"Tomorrow","time":"10:30 AM","hoursFromNow":20},{"day":"Thursday","time":"5:00 PM","hoursFromNow":46}],
+    "sessionLoad": 5
+  },
+  {
+    "id": "dr-noah-williams",
+    "fullName": "Dr. Noah Williams",
+    "credentials": "LMFT, Couples Therapist",
+    "states": ["CA", "NY", "TX"],
+    "languages": ["English"],
+    "gender": "male",
+    "insuranceProviders": ["Blue Cross Blue Shield", "Cigna"],
+    "appointmentTypes": ["therapy"],
+    "specialties": ["couples", "anxiety", "depression"],
+    "availability": [{"day":"Friday","time":"9:30 AM","hoursFromNow":72},{"day":"Monday","time":"12:00 PM","hoursFromNow":120}],
+    "sessionLoad": 10
+  },
+  {
+    "id": "dr-priya-shah",
+    "fullName": "Dr. Priya Shah",
+    "credentials": "MD, Psychiatrist",
+    "states": ["NY", "TX", "FL"],
+    "languages": ["English", "Hindi"],
+    "gender": "female",
+    "insuranceProviders": ["Aetna", "Blue Cross Blue Shield", "Cigna"],
+    "appointmentTypes": ["medication"],
+    "specialties": [],
+    "availability": [{"day":"Today","time":"5:30 PM","hoursFromNow":2},{"day":"Tomorrow","time":"1:00 PM","hoursFromNow":22}],
+    "sessionLoad": 14
+  }
+]
