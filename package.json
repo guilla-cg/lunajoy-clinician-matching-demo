@@ -1,0 +1,9 @@
+{
+  "name": "lunajoy-clinician-matching-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Vercel-ready clinician matching challenge demo",
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}
