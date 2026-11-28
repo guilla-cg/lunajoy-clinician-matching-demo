@@ -31,7 +31,7 @@ function initials(name){ return name.replace('Dr. ','').split(' ').slice(0,2).ma
 
 function ClinicianCard({ match, index }) {
   const [expanded,setExpanded]=useState(false);
-  const nameParts=match.fullName.split(' ');
+  const firstName=match.fullName.replace(/^Dr\.\s*/, '').split(' ')[0];
   return h('article',{className:'clinician-card'},
     h('div',{className:'card-top'},
       h('div',{className:'person'},h('div',{className:`avatar a${index%3}`},initials(match.fullName)),h('div',null,h('h3',null,match.fullName),h('p',null,match.credentials))),
@@ -42,7 +42,7 @@ function ClinicianCard({ match, index }) {
     h('div',{className:'availability'},h('span',{className:'dot'}),`${match.nextAvailability.day} · ${match.nextAvailability.time}`),
     h('div',{className:'reasons'},match.explanation.map((reason,i)=>h('span',{className:'reason',key:i},reason))),
     h('div',{className:'card-foot'},h('span',{className:'overlap'},match.overlappingAttributes.join(' · ')||'Available in your state'),h('button',{className:'profile-button',onClick:()=>setExpanded(!expanded),'aria-expanded':expanded},expanded?'Hide details':'Why this match?')),
-    expanded?h('p',{className:'disclaimer',style:{margin:'9px 0 0'}},`${nameParts[0]} is licensed in your state and offers ${match.appointmentTypes.join(' and ')}. This demo ranks preferences; it does not assess clinical suitability.`):null
+    expanded?h('p',{className:'disclaimer',style:{margin:'9px 0 0'}},`${firstName} is licensed in your state and offers ${match.appointmentTypes.join(' and ')}. This demo ranks preferences; it does not assess clinical suitability.`):null
   );
 }
 
