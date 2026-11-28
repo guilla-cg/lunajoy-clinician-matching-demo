@@ -21,7 +21,14 @@ module.exports = function handler(req, res) {
   const results = matchClinicians(patient);
   return res.status(200).json({
     count: results.length,
-    results: results.map(({ clinician, ...match }) => ({ ...clinician, ...match })),
+    results: results.map(({ clinician, ...match }) => ({
+      id: clinician.id,
+      fullName: clinician.fullName,
+      credentials: clinician.credentials,
+      appointmentTypes: clinician.appointmentTypes,
+      specialties: clinician.specialties,
+      ...match
+    })),
     message: results.length ? null : 'We could not find an eligible clinician for these state and appointment-type requirements. Try another preference or contact care navigation.'
   });
 };
