@@ -1,5 +1,7 @@
 const { matchClinicians } = require('../lib/matching');
 
+const asArray = (value) => value == null ? [] : Array.isArray(value) ? value : [value];
+
 module.exports = function handler(req, res) {
   if (!['GET', 'POST'].includes(req.method)) return res.status(405).json({ error: 'Method not allowed' });
   const body = req.method === 'GET' ? (req.query || {}) : (req.body || {});
@@ -12,8 +14,8 @@ module.exports = function handler(req, res) {
     genderPreference: body.gender_preference,
     insuranceProvider: body.insurance_provider,
     appointmentType: body.appointment_type,
-    clinicalNeeds: body.clinical_needs || [],
-    preferredTimeSlots: body.preferred_time_slots || [],
+    clinicalNeeds: asArray(body.clinical_needs),
+    preferredTimeSlots: asArray(body.preferred_time_slots),
     urgency: body.urgency_level || 'flexible'
   };
   if (patient.appointmentType === 'medication') patient.clinicalNeeds = [];
