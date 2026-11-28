@@ -1,4 +1,6 @@
-const { createElement: h, useState } = React;
+import React, { createElement as h, useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import './styles.css';
 
 const STATES = [['CA','California'],['NY','New York'],['TX','Texas'],['FL','Florida'],['WA','Washington'],['CO','Colorado'],['AZ','Arizona']];
 const LANGUAGES = ['English','Spanish','Mandarin','Hindi'];
@@ -104,4 +106,4 @@ function App(){
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(h(App));
+createRoot(document.getElementById('root')).render(h(App));

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The demo is a small, serverless web application designed for Vercel. A React interface collects patient preferences and submits them to a Node.js API function. The function applies explicit eligibility rules and a weighted ranking model to a local JSON clinician catalogue, then returns ranked profile cards with match explanations.
+The demo is a small, serverless web application designed for Vercel. A React interface bundled by Vite collects patient preferences and submits them to a Node.js API function. The function applies explicit eligibility rules and a weighted ranking model to a local JSON clinician catalogue, then returns ranked profile cards with match explanations.
 
 ```mermaid
 flowchart LR
@@ -16,7 +16,7 @@ flowchart LR
 
 ## Components and data flow
 
-1. `public/index.html`, `public/app.js`, and `public/styles.css` provide the responsive React intake and results experience.
+1. `index.html`, `src/app.js`, and `src/styles.css` provide the responsive React intake and results experience; Vite bundles React locally into `dist/`.
 2. `api/clinicians.js` serves a safe subset of mock clinician records through `GET /clinicians`.
 3. `api/match.js` validates the request and returns eligible, ranked clinicians through `POST /match`.
 4. `api/match-explain.js` returns a plain-language summary for the highest ranked result through `POST /match/explain`.
@@ -25,7 +25,7 @@ flowchart LR
 
 ## Stack
 
-- React 18 client, served as static assets.
+- React 18 and Vite client bundle, served as static assets.
 - Vercel Node.js serverless functions (CommonJS).
 - JSON mock data; no database or external scheduling dependency.
 - Vercel Git integration for preview and production deployments.
