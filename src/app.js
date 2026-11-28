@@ -78,7 +78,7 @@ function App(){
       h('section',{className:'panel form-panel','aria-labelledby':'intake-title'},
         h('div',{className:'panel-heading'},h('div',null,h('h2',{id:'intake-title'},'Your care preferences'),h('p',null,'Start with what matters most to you.')),h('span',{className:'step'},'01 / 01')),
         h('form',{onSubmit:submit},
-          h('div',{className:'field'},h('span',{className:'legend'},'What kind of care are you looking for?'),h(Toggle,{value:appointmentType,onChange:setAppointment,items:[['therapy','Therapy'],['medication','Medication']]})),
+          h('div',{className:'field'},h('span',{className:'legend'},'What kind of care are you looking for?'),h(Toggle,{value:appointmentType,onChange:setAppointmentType,items:[['therapy','Therapy'],['medication','Medication']]})),
           h(SelectField,{label:'Where do you live?',value:state,onChange:setState,options:STATES.map(([key,name])=>[key,name])}),
           h(SelectField,{label:'Preferred language',value:language,onChange:setLanguage,options:LANGUAGES.map(x=>[x,x])}),
           h(SelectField,{label:'Insurance provider',value:insuranceProvider,onChange:setInsurance,options:INSURANCES.map(x=>[x,x]),hint:'We’ll prioritize clinicians who accept your plan.'}),
